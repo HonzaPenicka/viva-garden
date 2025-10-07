@@ -1,52 +1,10 @@
-import Link from "next/link";
-import { useCallback, useState } from "react";
-
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineYoutube } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { AiOutlinePhone } from "react-icons/ai";
-import { AiOutlineMail } from "react-icons/ai";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
-  const toggleMenu = useCallback(() => setIsMenuOpen((prev) => !prev), []);
   return (
     <>
-      <header className="flex justify-between items-center p-4 text-3xl font-bold border-b-2 border-yellow-700 bg-white relative overflow-visible">
-        <Link href="/" className="w-32">
-          <img src="/logo.png" />
-        </Link>
-        <button onClick={toggleMenu} aria-label="Toggle menu">
-          <GiHamburgerMenu className="text-black" />
-        </button>
-
-        {isMenuOpen && (
-          <nav className="absolute top-full z-10 left-0 right-0 bg-white border-2 border-green-500 p-4 font-semibold text-xl w-full text-black">
-            <ul className="flex flex-col gap-4 text-right uppercase">
-              <li className="hover:decoration-green-500 hover:underline hover:underline-offset-4">
-                <a href="/">Domů</a>
-              </li>
-
-              <li className="hover:decoration-green-500 hover:underline hover:underline-offset-4">
-                <a href="/about">O nás</a>
-              </li>
-
-              <li className="hover:decoration-green-500 hover:underline hover:underline-offset-4">
-                <a href="/services">Služby</a>
-              </li>
-
-              <li className="hover:decoration-green-500 hover:underline hover:underline-offset-4">
-                <a href="/references">Reference</a>
-              </li>
-
-              <li className="hover:decoration-green-500 hover:underline hover:underline-offset-4">
-                <a href="/contact">Kontakt</a>
-              </li>
-            </ul>
-          </nav>
-        )}
-      </header>
+      <Header />
 
       <main className="grid p-4 gap-4 bg-[url('/img/garden.jpg')] bg-cover bg-center">
         <h1 className="text-4xl font-bold">Zahrady ViVa</h1>
@@ -91,56 +49,7 @@ export default function Home() {
         </h2>
       </main>
 
-      <footer className="grid md:flex p-4 gap-4 justify-center md:justify-around items-center">
-        <Link href="/" className="w-56">
-          <img src="/logo.png" />
-        </Link>
-
-        <div className="flex gap-8">
-          <div className="flex flex-col gap-4 font-bold">
-            <a href="/">Domů</a>
-            <a href="/about">O nás</a>
-          </div>
-
-          <div className="flex flex-col gap-4 font-bold">
-            <a href="/services">Služby</a>
-            <a href="/references">Reference</a>
-          </div>
-
-          <div className="flex flex-col gap-4 font-bold">
-            <a href="/contact">Kontakt</a>
-          </div>
-        </div>
-
-        <div className="flex gap-8 text-4xl justify-center">
-          <Link
-            href="https://www.youtube.com"
-            target="_blank"
-            className="hover:text-green-500"
-          >
-            <AiOutlineYoutube />
-          </Link>
-
-          <Link
-            href="https://www.instagram.com"
-            target="_blank"
-            className="hover:text-green-500"
-          >
-            <AiOutlineInstagram />
-          </Link>
-
-          <Link href="tel:+420607037079" className="hover:text-green-500">
-            <AiOutlinePhone />
-          </Link>
-
-          <Link
-            href="mailto:zahradyviva@gmail.com"
-            className="hover:text-green-500"
-          >
-            <AiOutlineMail />
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
