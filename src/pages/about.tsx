@@ -42,7 +42,7 @@ export default function About() {
           různého charakteru.
         </p>
 
-        <h2 className="text-xl font-semibold">Naše filozofie</h2>
+        <h2 className="text-lg font-semibold">Naše filozofie</h2>
 
         <p className="text-sm">
           Věříme, že zahrada není jen kus pozemku, o který se musíte starat, ale
@@ -52,12 +52,12 @@ export default function About() {
           mnoho let.
         </p>
 
-        <h3 className="text-xl font-semibold">
+        <h3 className="text-lg font-semibold ">
           Zahrady ViVa – tradice, zkušenost a péče, která má kořeny.
         </h3>
 
         <div className="flex justify-center">
-          <button className="p-4 rounded-xl border-green-600 font-bold my-4 border-2 hover:border-yellow-700 hover:bg-green-600 hover:text-white transition">
+          <button className="p-4 rounded-xl border-green-600 font-bold my-4 border-2 hover:border-yellow-700 hover:bg-green-600 hover:text-white action:border-yellow-700 action:bg-green-600 action:text-white transition delay-50 duration-300">
             Kontaktujte nás
           </button>
         </div>
@@ -66,8 +66,8 @@ export default function About() {
 
         <div className="grid gap-2">
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-8 h-8 flex-shrink-0" />
-            <p className="flex-1">
+            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <p className="flex-1 text-sm">
               Komplexní přístup: Spojujeme zahradnickou odbornost s technickým
               know-how, abychom nabízeli ucelené a inovativní řešení pro každého
               zákazníka.
@@ -75,24 +75,24 @@ export default function About() {
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-8 h-8 flex-shrink-0" />
-            <p className="flex-1">
+            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <p className="flex-1 text-sm">
               Kvalita a preciznost: Každý projekt realizujeme s důrazem na
               detail, dlouhodobou udržitelnost a individuální potřeby klientů.
             </p>
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-8 h-8 flex-shrink-0" />
-            <p className="flex-1">
+            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <p className="flex-1 text-sm">
               Osobní přístup: Jako rodinná firma klademe důraz na férové
               jednání, otevřenou komunikaci a vzájemnou důvěru.
             </p>
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-8 h-8 flex-shrink-0" />
-            <p className="flex-1">
+            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <p className="flex-1 text-sm">
               Inspirace ze zahraničí: Naše zkušenosti z Česka i Švýcarska nám
               umožňují přinášet moderní trendy a efektivní řešení.
             </p>
