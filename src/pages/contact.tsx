@@ -47,7 +47,7 @@ export default function Contact() {
             <p className="font-semibold">E-mail:</p>
             <Link
               href="mailto:zahradyviva@gmail.com"
-              className="hover:font-bold hover:text-green-700"
+              className="hover:font-bold hover:text-green-600"
             >
               zahradyviva@gmail.com
             </Link>
@@ -57,7 +57,7 @@ export default function Contact() {
             <p className="font-semibold">Mobilní telefon:</p>
             <Link
               href="tel:+420607037079"
-              className="hover:font-bold hover:text-green-700"
+              className="hover:font-bold hover:text-green-600"
             >
               +420 607 037 079
             </Link>

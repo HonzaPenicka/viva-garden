@@ -98,7 +98,7 @@ export default function Services() {
           {Object.entries(servicesData).map(([service, options]) => (
             <div key={service} className="relative">
               <div
-                className="text-sm text-left border-2 p-4 rounded-xl border-green-600 hover:border-yellow-700/50 active:border-yellow-700/50 focus:border-yellow-700/50 cursor-pointer"
+                className="text-sm text-left border-2 p-4 rounded-xl border-green-600/50 bg-green-50 hover:border-yellow-700/50 active:border-yellow-700/50 focus:border-yellow-700/50 cursor-pointer"
                 onClick={() =>
                   setOpenDropdown(openDropdown === service ? null : service)
                 }
