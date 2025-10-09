@@ -12,11 +12,13 @@ export default function About() {
       <main className="grid gap-4 text-black p-4 pt-0">
         <div className="bg-[url('/img/garden-green.jpg')] grid gap-4 bg-cover bg-center -mx-4 min-h-[400px]">
           <div className="flex flex-col gap-8 justify-center">
-            <h1 className="text-5xl font-bold px-4 text-white">O nás</h1>
+            <h1 className="text-5xl font-bold px-4 text-white uppercase">
+              O nás
+            </h1>
           </div>
         </div>
 
-        <h2 className="text-4xl font-bold">Zahrady ViVa</h2>
+        <h2 className="text-4xl font-bold uppercase">Zahrady ViVa</h2>
 
         <h2 className="text-xl font-semibold">
           Rodinná tradice zakořeněná v praxi
@@ -54,7 +56,7 @@ export default function About() {
         </p>
 
         <h3 className="text-lg font-semibold ">
-          Zahrady ViVa – tradice, zkušenost a péče, která má kořeny.
+          ZAHRADY VIVA – tradice, zkušenost a péče, která má kořeny.
         </h3>
 
         <Button />

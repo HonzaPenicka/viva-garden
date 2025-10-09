@@ -10,7 +10,7 @@ export default function Home() {
       <main className="grid gap-4 text-black p-4 pt-0">
         <div className="bg-[url('/img/garden.jpg')] grid gap-4 bg-cover bg-bottom -mx-4 min-h-[400px]">
           <div className="flex flex-col gap-8 justify-center">
-            <h1 className="text-5xl font-bold px-4 text-white">
+            <h1 className="text-5xl font-bold px-4 text-white uppercase">
               ZAHRADY <br />
               ViVa
             </h1>
@@ -52,9 +52,9 @@ export default function Home() {
           mnoho let.
         </p>
 
-        <h2 className="text-xl font-semibold">
-          Zahrady ViVa – tradice, zkušenost a péče, která má kořeny.
-        </h2>
+        <h3 className="text-lg font-semibold ">
+          ZAHRADY VIVA – tradice, zkušenost a péče, která má kořeny.
+        </h3>
 
         <Button />
       </main>
