@@ -2,6 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 import { LuLeaf } from "react-icons/lu";
+import { Button } from "@/components/button";
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
       <main className="grid gap-4 text-black p-4 pt-0">
         <div className="bg-[url('/img/garden-green.jpg')] grid gap-4 bg-cover bg-center -mx-4 min-h-[400px]">
           <div className="flex flex-col gap-8 justify-center">
-            <h1 className="text-7xl font-bold px-4 text-white">O nás</h1>
+            <h1 className="text-5xl font-bold px-4 text-white">O nás</h1>
           </div>
         </div>
 
@@ -56,17 +57,13 @@ export default function About() {
           Zahrady ViVa – tradice, zkušenost a péče, která má kořeny.
         </h3>
 
-        <div className="flex justify-center">
-          <button className="p-4 rounded-xl border-green-600 font-bold my-4 border-2 hover:border-yellow-700 hover:bg-green-600 hover:text-white action:border-yellow-700 action:bg-green-600 action:text-white transition delay-50 duration-300">
-            Kontaktujte nás
-          </button>
-        </div>
+        <Button />
 
         <h2 className="text-xl font-semibold">Naše vize a hodnoty</h2>
 
         <div className="grid gap-2">
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
             <p className="flex-1 text-sm">
               Komplexní přístup: Spojujeme zahradnickou odbornost s technickým
               know-how, abychom nabízeli ucelené a inovativní řešení pro každého
@@ -75,7 +72,7 @@ export default function About() {
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
             <p className="flex-1 text-sm">
               Kvalita a preciznost: Každý projekt realizujeme s důrazem na
               detail, dlouhodobou udržitelnost a individuální potřeby klientů.
@@ -83,7 +80,7 @@ export default function About() {
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
             <p className="flex-1 text-sm">
               Osobní přístup: Jako rodinná firma klademe důraz na férové
               jednání, otevřenou komunikaci a vzájemnou důvěru.
@@ -91,7 +88,7 @@ export default function About() {
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0" />
+            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
             <p className="flex-1 text-sm">
               Inspirace ze zahraničí: Naše zkušenosti z Česka i Švýcarska nám
               umožňují přinášet moderní trendy a efektivní řešení.

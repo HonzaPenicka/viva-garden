@@ -1,13 +1,21 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Button } from "@/components/button";
 
 export default function Home() {
   return (
     <>
       <Header />
 
-      <main className="grid p-4 gap-4 bg-[url('/img/garden.jpg')] bg-cover bg-center">
-        <h1 className="text-4xl font-bold">Zahrady ViVa</h1>
+      <main className="grid gap-4 text-black p-4 pt-0">
+        <div className="bg-[url('/img/garden.jpg')] grid gap-4 bg-cover bg-bottom -mx-4 min-h-[400px]">
+          <div className="flex flex-col gap-8 justify-center">
+            <h1 className="text-5xl font-bold px-4 text-white">
+              ZAHRADY <br />
+              ViVa
+            </h1>
+          </div>
+        </div>
 
         <h2 className="text-xl font-semibold">
           Rodinná tradice zakořeněná v praxi
@@ -47,6 +55,8 @@ export default function Home() {
         <h2 className="text-xl font-semibold">
           Zahrady ViVa – tradice, zkušenost a péče, která má kořeny.
         </h2>
+
+        <Button />
       </main>
 
       <Footer />

@@ -8,10 +8,12 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="grid md:flex p-4 gap-4 justify-center md:justify-between items-center text-black bg-white border-t-2 border-yellow-700">
-      <Link href="/" className="w-56">
-        <img src="/logo.png" />
-      </Link>
+    <footer className="grid md:flex p-4 gap-4 justify-center md:justify-between items-center text-black bg-white border-t-2 border-yellow-700/50">
+      <div className="flex justify-center">
+        <Link href="/" className="w-32">
+          <img src="/logo.png" />
+        </Link>
+      </div>
 
       {/*<div className="flex gap-8">
         <div className="flex flex-col gap-4 font-bold">
@@ -32,11 +34,14 @@ export const Footer = () => {
 
       <div className="flex gap-8 text-4xl justify-center">
         <Link
-          href="https://www.youtube.com"
-          target="_blank"
+          href="mailto:zahradyviva@gmail.com"
           className="hover:text-green-600"
         >
-          <AiOutlineYoutube />
+          <AiOutlineMail />
+        </Link>
+
+        <Link href="tel:+420607037079" className="hover:text-green-600">
+          <AiOutlinePhone />
         </Link>
 
         <Link
@@ -47,15 +52,12 @@ export const Footer = () => {
           <AiOutlineInstagram />
         </Link>
 
-        <Link href="tel:+420607037079" className="hover:text-green-600">
-          <AiOutlinePhone />
-        </Link>
-
         <Link
-          href="mailto:zahradyviva@gmail.com"
+          href="https://www.youtube.com"
+          target="_blank"
           className="hover:text-green-600"
         >
-          <AiOutlineMail />
+          <AiOutlineYoutube />
         </Link>
       </div>
     </footer>
