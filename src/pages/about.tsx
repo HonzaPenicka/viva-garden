@@ -9,10 +9,10 @@ export default function About() {
     <>
       <Header />
 
-      <main className="grid gap-4 text-black p-4 pt-0">
-        <div className="bg-[url('/img/garden-green.jpg')] grid gap-4 bg-cover bg-center -mx-4 min-h-[400px]">
+      <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:gap-8 md:px-0">
+        <div className="bg-[url('/img/garden-green.jpg')] grid gap-4 bg-cover bg-center -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
           <div className="flex flex-col gap-8 justify-center">
-            <h1 className="text-5xl font-bold px-4 text-white uppercase">
+            <h1 className="text-5xl md:text-6xl font-bold px-4 text-white uppercase">
               O nás
             </h1>
           </div>
@@ -20,11 +20,11 @@ export default function About() {
 
         <h2 className="text-4xl font-bold uppercase">Zahrady ViVa</h2>
 
-        <h2 className="text-xl font-semibold">
+        <h2 className="text-xl font-semibold md:text-2xl md:w-2/3">
           Rodinná tradice zakořeněná v praxi
         </h2>
 
-        <p className="text-sm">
+        <p className="text-sm md:text-lg md:w-2/3 md:text-justify">
           Zahrady ViVa jsou rodinnou firmou, která vyrostla z celoživotních
           zkušeností otce – zahradníka, jenž se své profesi věnuje celý život.
           Na jeho práci a znalostech dnes navazuje mladší generace s novou
@@ -33,21 +33,23 @@ export default function About() {
           vaši zahradu i okolí domu.
         </p>
 
-        <p className="text-sm">
+        <p className="text-sm md:text-lg md:w-2/3 md:text-justify">
           Naším posláním je, aby váš dům i zahrada byly nejen krásné, ale i
           dlouhodobě udržované a funkční.
         </p>
 
-        <p className="text-sm">
+        <p className="text-sm md:text-lg md:w-2/3 md:text-justify">
           Specializujeme se nejen na údržbu zahrad samotných, ale nabízíme také
           služby zámečnictví jako vrata, brány, ploty, zábradlí, opravy
           funkčních prvků domů, opravu zahradní techniky nebo stavební práce
           různého charakteru.
         </p>
 
-        <h2 className="text-lg font-semibold">Naše filozofie</h2>
+        <h2 className="text-lg md:text-xl font-semibold md:w-2/3">
+          Naše filozofie
+        </h2>
 
-        <p className="text-sm">
+        <p className="text-sm md:text-lg md:w-2/3 md:text-justify">
           Věříme, že zahrada není jen kus pozemku, o který se musíte starat, ale
           prodloužení vašeho domova. Proto k práci přistupujeme s respektem,
           pečlivostí a osobním nasazením. Každý projekt je pro nás příležitostí
@@ -55,18 +57,20 @@ export default function About() {
           mnoho let.
         </p>
 
-        <h3 className="text-lg font-semibold ">
+        <h3 className="text-lg md:text-xl font-semibold md:w-2/3">
           ZAHRADY VIVA – tradice, zkušenost a péče, která má kořeny.
         </h3>
 
         <Button />
 
-        <h2 className="text-xl font-semibold">Naše vize a hodnoty</h2>
+        <h2 className="text-xl md:text-2xl font-semibold md:w-2/3">
+          Naše vize a hodnoty
+        </h2>
 
         <div className="grid gap-2">
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
-            <p className="flex-1 text-sm">
+            <LuLeaf className="w-4 h-4 md:w-6 md:h-6 flex-shrink-0 text-green-600" />
+            <p className="flex-1 text-sm md:text-lg md:w-2/3 md:text-justify">
               Komplexní přístup: Spojujeme zahradnickou odbornost s technickým
               know-how, abychom nabízeli ucelené a inovativní řešení pro každého
               zákazníka.
@@ -74,24 +78,24 @@ export default function About() {
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
-            <p className="flex-1 text-sm">
+            <LuLeaf className="w-4 h-4 md:w-6 md:h-6 flex-shrink-0 text-green-600" />
+            <p className="flex-1 text-sm md:text-lg md:w-2/3 md:text-justify">
               Kvalita a preciznost: Každý projekt realizujeme s důrazem na
               detail, dlouhodobou udržitelnost a individuální potřeby klientů.
             </p>
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
-            <p className="flex-1 text-sm">
+            <LuLeaf className="w-4 h-4 md:w-6 md:h-6 flex-shrink-0 text-green-600" />
+            <p className="flex-1 text-sm md:text-lg md:w-2/3 md:text-justify">
               Osobní přístup: Jako rodinná firma klademe důraz na férové
               jednání, otevřenou komunikaci a vzájemnou důvěru.
             </p>
           </div>
 
           <div className="flex gap-2 items-start">
-            <LuLeaf className="w-4 h-4 flex-shrink-0 text-green-600" />
-            <p className="flex-1 text-sm">
+            <LuLeaf className="w-4 h-4 md:w-6 md:h-6 flex-shrink-0 text-green-600" />
+            <p className="flex-1 text-sm md:text-lg md:w-2/3 md:text-justify">
               Inspirace ze zahraničí: Naše zkušenosti z Česka i Švýcarska nám
               umožňují přinášet moderní trendy a efektivní řešení.
             </p>
