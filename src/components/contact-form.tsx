@@ -1,7 +1,7 @@
 export const ContactForm = () => {
   return (
     <form>
-      <div className="grid gap-4 mb-4 shadow-md border border-green-100 hover:shadow-lg p-4 rounded-xl md:w-1/3 md:gap-8 text-left">
+      <div className="grid gap-4 mb-4 shadow-md border border-green-100 hover:shadow-lg p-4 rounded-xl md:gap-8 text-left">
         <h3 className="text-2xl font-semibold  md:w-2/3 md:text-3xl text-green-700/90">
           Napište nám
         </h3>

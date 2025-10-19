@@ -67,12 +67,12 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="text-sm pb-4 md:text-lg md:text-justify mt-4 md:w-2/3">
+        <div className="text-sm pb-4 md:text-lg mt-4">
           Zajišťujeme široké spektrum služeb zaměřených na realizaci, údržbu i
           technické zajištění zahrad a přilehlých prostor.
           <br />
           <br />
-          <p className="font-semibold md:text-lg md:text-justify">
+          <p className="font-semibold md:text-lg">
             Níže naleznete seznam služeb, které poskytujeme.
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function Services() {
           ))}
         </section>
 
-        <h3 className="text-2xl font-semibold  md:w-2/3 md:text-3xl mt-4 text-green-700/90">
+        <h3 className="text-xl font-semibold md:text-3xl text-green-700/90">
           Tradice, zkušenost a péče, která má kořeny.
         </h3>
 

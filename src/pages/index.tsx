@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="grid gap-4 text-black p-4 md:p-0 pt-0 md:container md:mx-auto md:gap-8 text-center">
+      <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:gap-8 text-center">
         <div className="bg-[url('/img/garden.jpg')] grid gap-4 bg-cover bg-bottom -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
           <div className="flex flex-col gap-4 justify-center">
             <h1 className="text-6xl md:text-7xl font-bold px-4 text-white uppercase pt-8">
@@ -15,7 +15,7 @@ export default function Home() {
               ViVa
             </h1>
           </div>
-          <h2 className="text-2xl md:text-2xl font-semibold md:w-2/3 text-white">
+          <h2 className="text-2xl md:text-4xl font-semibold text-white">
             Rodinná tradice zakořeněná v praxi
           </h2>
           <div>
@@ -23,11 +23,11 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-semibold md:w-2/3 mt-4">
+        <h2 className="text-3xl md:text-4xl font-semibold mt-4 md:px-16">
           Kdo jsme?
         </h2>
 
-        <p className="text-sm md:w-2/3 md:text-lg">
+        <p className="text-sm md:text-lg xl:px-36">
           Zahrady ViVa jsou rodinnou firmou, která vyrostla z celoživotních
           zkušeností otce – zahradníka, jenž se své profesi věnuje celý život.
           Na jeho práci a znalostech dnes navazuje mladší generace s novou
@@ -36,23 +36,23 @@ export default function Home() {
           vaši zahradu i okolí domu.
         </p>
 
-        <p className="text-sm md:w-2/3 md:text-lg">
+        <p className="text-sm md:text-lg xl:px-36">
           Naším posláním je, aby váš dům i zahrada byly nejen krásné, ale i
           dlouhodobě udržované a funkční.
         </p>
 
-        <p className="text-sm md:w-2/3 md:text-lg">
+        <p className="text-sm md:text-lg xl:px-36">
           Specializujeme se nejen na údržbu zahrad samotných, ale nabízíme také
           služby zámečnictví jako vrata, brány, ploty, zábradlí, opravy
           funkčních prvků domů, opravu zahradní techniky nebo stavební práce
           různého charakteru.
         </p>
 
-        <h2 className="text-3xl font-semibold md:w-2/3 md:text-4xl my-4">
+        <h2 className="text-3xl font-semibold md:text-4xl my-4">
           Naše filozofie 🌳
         </h2>
 
-        <p className="text-sm md:w-2/3 md:text-lg">
+        <p className="text-sm md:text-lg xl:px-36">
           Věříme, že zahrada není jen kus pozemku, o který se musíte starat, ale
           prodloužení vašeho domova. Proto k práci přistupujeme s respektem,
           pečlivostí a osobním nasazením. Každý projekt je pro nás příležitostí
@@ -60,7 +60,7 @@ export default function Home() {
           mnoho let.
         </p>
 
-        <h3 className="text-2xl font-semibold  md:w-2/3 md:text-3xl mt-4 text-green-700/90">
+        <h3 className="text-xl font-semibold md:text-3xl text-green-700/90">
           Tradice, zkušenost a péče, která má kořeny.
         </h3>
 
