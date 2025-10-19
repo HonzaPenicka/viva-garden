@@ -16,25 +16,25 @@ export const Header = () => {
       </button>
 
       {isMenuOpen && (
-        <nav className="absolute top-full z-10 left-0 right-0 bg-white border-2 border-yellow-700/50 p-4 font-semibold text-xl w-full text-black">
-          <ul className="flex flex-col gap-4 text-right uppercase">
-            <li className="hover:decoration-green-600 hover:text-yellow-700/50 hover:underline hover:underline-offset-4 underline underline-offset-4 decoration-amber-700/50">
+        <nav className="absolute top-full z-10 left-0 right-0 bg-white border-2 border-yellow-700/50 p-4 lg:p-8 font-semibold text-xl w-full text-black">
+          <ul className="flex flex-col gap-4 lg:gap-8 text-right uppercase">
+            <li className="hover:decoration-green-600 hover:text-green-700/90">
               <a href="/">Domů</a>
             </li>
 
-            <li className="hover:decoration-green-600 hover:text-yellow-700/50 hover:underline hover:underline-offset-4 underline underline-offset-4 decoration-amber-700/50">
+            <li className="hover:text-green-700/90">
               <a href="/about">O nás</a>
             </li>
 
-            <li className="hover:decoration-green-600 hover:text-yellow-700/50 hover:underline hover:underline-offset-4 underline underline-offset-4 decoration-amber-700/50">
+            <li className="hover:text-green-700/90">
               <a href="/services">Služby</a>
             </li>
 
-            <li className="hover:decoration-green-600 hover:text-yellow-700/50 hover:underline hover:underline-offset-4 underline underline-offset-4 decoration-amber-700/50">
+            <li className="hover:text-green-700/90">
               <a href="/references">Reference</a>
             </li>
 
-            <li className="hover:decoration-green-600 hover:text-yellow-700/50 hover:underline hover:underline-offset-4 underline underline-offset-4 decoration-amber-700/50">
+            <li className="hover:text-green-700/90">
               <a href="/contact">Kontakt</a>
             </li>
           </ul>
