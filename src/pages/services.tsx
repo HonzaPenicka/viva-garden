@@ -4,69 +4,52 @@ import { Footer } from "@/components/footer";
 import { useState } from "react";
 import { Button } from "@/components/button";
 
-const servicesData = {
-  "Údržba zahradní zeleně": [
-    "Sekání trávy",
-    "Stříhání živých plotů",
-    "Péče o stromy a keře",
-    "Vertikutace trávníku",
-  ],
-  "Zakládání zahrad": [
-    "Návrh zahrady",
-    "Výsadba rostlin",
-    "Založení trávníku",
-    "Instalace závlahových systémů",
-  ],
-  "Tvorba přírodních jezírek": [
-    "Návrh jezírka",
-    "Realizace",
-    "Údržba",
-    "Filtrace",
-  ],
-  "Terénní úpravy": [
-    "Modelace terénu",
-    "Odvodnění",
-    "Zpevněné plochy",
-    "Schody a opěrné zdi",
-  ],
-  Oplocení: ["Pletivové ploty", "Kované ploty", "Živé ploty", "Opravy plotů"],
-  "Automatizované sekání": [
-    "Instalace robotických sekaček",
-    "Servis",
-    "Vymezení plochy",
-    "Optimalizace provozu",
-  ],
-  "Úklid a vyklízení": [
-    "Vyklízení zahrad",
-    "Odvoz bioodpadu",
-    "Čištění ploch",
-    "Zimní údržba",
-  ],
-  "Spolupráce s realitními kancelářemi": [
-    "Příprava nemovitosti",
-    "Údržba pozemků",
-    "Pravidelný servis",
-    "Konzultace",
-  ],
-  "Převoz materiálu": [
-    "Dovoz substrátu",
-    "Odvoz odpadu",
-    "Přeprava rostlin",
-    "Manipulace s těžkými břemeny",
-  ],
-  "Zakázková kovovýroba": [
-    "Brány a branky",
-    "Zábradlí",
-    "Pergoly",
-    "Kovové konstrukce",
-  ],
-  "Stavební práce": [
-    "Drobné stavební úpravy",
-    "Základové konstrukce",
-    "Dlažby a obrubníky",
-    "Zídky a tarasy",
-  ],
-};
+import {
+  LuLeaf,
+  LuHammer,
+  LuFence,
+  LuDroplets,
+  LuWrench,
+} from "react-icons/lu";
+import Link from "next/link";
+
+const servicesData = [
+  {
+    icon: LuLeaf,
+    title: "Údržba zahradní zeleně",
+    items: [
+      "Sekání trávy",
+      "Stříhání živých plotů",
+      "Péče o stromy a keře",
+      "Vertikutace trávníku",
+    ],
+  },
+  {
+    icon: LuDroplets,
+    title: "Zakládání zahrad",
+    items: ["Návrh zahrady", "Výsadba rostlin", "Založení trávníku", "IZS"],
+  },
+  {
+    icon: LuDroplets,
+    title: "Tvorba přírodních jezírek",
+    items: ["Návrh jezírka", "Realizace", "Údržba", "Filtrace"],
+  },
+  {
+    icon: LuHammer,
+    title: "Terénní úpravy",
+    items: ["Modelace terénu", "Odvodnění", "Zpevněné plochy", "Opěrné zdi"],
+  },
+  {
+    icon: LuFence,
+    title: "Oplocení",
+    items: ["Pletivové ploty", "Kované ploty", "Živé ploty", "Opravy plotů"],
+  },
+  {
+    icon: LuWrench,
+    title: "Zakázková kovovýroba",
+    items: ["Brány a branky", "Zábradlí", "Pergoly", "Konstrukce"],
+  },
+];
 
 export default function Services() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -75,16 +58,16 @@ export default function Services() {
     <>
       <Header />
 
-      <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:px-0 md:gap-8">
-        <div className="bg-[url('/img/services.webp')] grid gap-4 bg-cover bg-top-left -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
+      <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:px-0 md:gap-8 text-center">
+        <div className="bg-[url('/img/services.webp')] text-white grid gap-4 bg-cover bg-top-left -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
           <div className="flex flex-col gap-8 justify-center">
-            <h1 className="text-5xl md:text-6xl font-bold px-4 text-white uppercase">
+            <h1 className="text-6xl md:text-7xl font-bold px-4 uppercase pt-8">
               Nabízené <br /> služby
             </h1>
           </div>
         </div>
 
-        <div className="text-sm pb-4 md:text-lg md:text-justify">
+        <div className="text-sm pb-4 md:text-lg md:text-justify mt-4 md:w-2/3">
           Zajišťujeme široké spektrum služeb zaměřených na realizaci, údržbu i
           technické zajištění zahrad a přilehlých prostor.
           <br />
@@ -94,48 +77,41 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid gap-4 md:gap-8 md:grid-cols-3">
-          {Object.entries(servicesData).map(([service, options]) => (
-            <div key={service} className="relative">
-              <div
-                className="text-sm md:text-lg text-left border-2 p-4 md:p-8 rounded-xl border-green-600/50 bg-green-50 hover:border-yellow-700/50 active:border-yellow-700/50 focus:border-yellow-700/50 cursor-pointer"
-                onClick={() =>
-                  setOpenDropdown(openDropdown === service ? null : service)
-                }
-              >
-                <button className="w-full text-left flex justify-between items-center">
-                  {service}
-                  <span
-                    className={`transition-transform duration-200 ${
-                      openDropdown === service ? "rotate-180" : ""
-                    }`}
-                  >
-                    ▼
-                  </span>
-                </button>
+        <section className="grid gap-4 md:gap-8 md:grid-cols-2">
+          {servicesData.map(({ icon: Icon, title, items }) => (
+            <div
+              key={title}
+              className="p-4 rounded-2xl bg-white shadow-md border border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <Icon className="text-green-700/90 w-6 h-6" />
+
+                <h3 className="text-lg font-semibold text-green-700/90">
+                  {title}
+                </h3>
               </div>
 
-              {openDropdown === service && (
-                <div className="absolute z-10 w-full mt-2 bg-yellow-50 border-2 border-green-600 rounded-xl text-sm md:text-lg">
-                  {options.map((option) => (
-                    <div
-                      key={option}
-                      className="p-2 px-4 md:px-8 hover:bg-green-50 cursor-pointer rounded-xl"
+              <div className="text-sm grid grid-cols-2 gap-2">
+                {items.map((item) => (
+                  <button key={item}>
+                    <Link
+                      href=""
+                      className="border p-2 rounded-xl shadow-md border-green-100 hover:shadow-lg hover:bg-green-600/20 w-full block text-center"
                     >
-                      {option}
-                    </div>
-                  ))}
-                </div>
-              )}
+                      {item}
+                    </Link>
+                  </button>
+                ))}
+              </div>
             </div>
           ))}
-        </div>
+        </section>
 
-        <h3 className="text-lg font-semibold md:text-xl md:text-justify">
-          ZAHRADY VIVA – tradice, zkušenost a péče, která má kořeny.
+        <h3 className="text-2xl font-semibold  md:w-2/3 md:text-3xl mt-4 text-green-700/90">
+          Tradice, zkušenost a péče, která má kořeny.
         </h3>
 
-        <Button />
+        <Button className="my-4" />
       </main>
 
       <Footer />

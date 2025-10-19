@@ -3,24 +3,21 @@ import { Footer } from "@/components/footer";
 
 import { ContactForm } from "@/components/contact-form";
 import Link from "next/link";
+import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 
 export default function Contact() {
   return (
     <>
       <Header />
 
-      <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:px-0 md:gap-8">
+      <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:px-0 md:gap-8 text-center">
         <div className="bg-[url('/img/garden-green.jpg')] grid gap-4 bg-cover bg-center -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
           <div className="flex flex-col gap-8 justify-center">
-            <h1 className="text-5xl md:text-6xl font-bold px-4 text-white uppercase">
-              Kontaktujte <br /> nás
+            <h1 className="text-6xl md:text-7xl font-bold px-4 text-white uppercase pt-8">
+              Kontakt
             </h1>
           </div>
         </div>
-
-        <h3 className="text-lg font-semibold md:text-xl md:text-justify">
-          ZAHRADY VIVA – tradice, zkušenost a péče, která má kořeny.
-        </h3>
 
         <p className="text-sm md:text-lg md:text-justify">
           Pokud Vás zajímá více informací nebo si chcete domluvit schůzku,
@@ -33,25 +30,36 @@ export default function Contact() {
           kontaktovat na uvedených kontaktech.
         </p>
 
-        <div className="grid gap-4 md:text-xl md:text-justify">
-          <div className="flex gap-2">
-            <p className="font-semibold">E-mail:</p>
+        <div className="grid gap-4 md:text-xl md:text-justify border rounded-xl p-4 my-4 bg-green-50 shadow-md border-green-100 hover:shadow-lg">
+          <h3 className="text-2xl font-semibold text-left md:w-2/3 md:text-3xl text-green-700/90">
+            Kontaktní informace
+          </h3>
+
+          <div className="flex gap-4">
+            <LuMail className="text-green-700/80 w-6 h-6" />
+
             <Link
               href="mailto:zahradyviva@gmail.com"
-              className="hover:font-bold hover:text-green-600"
+              className="hover:font-bold hover:text-green-700/90"
             >
               zahradyviva@gmail.com
             </Link>
           </div>
 
-          <div className="flex gap-2">
-            <p className="font-semibold">Mobilní telefon:</p>
+          <div className="flex gap-4">
+            <LuPhone className="text-green-700/90 w-6 h-6" />
+
             <Link
               href="tel:+420607037079"
-              className="hover:font-bold hover:text-green-600"
+              className="hover:font-bold hover:text-green-700/90"
             >
               +420 607 037 079
             </Link>
+          </div>
+
+          <div className="flex gap-4">
+            <LuMapPin className="text-green-700/90 w-6 h-6" />
+            <p>Celá ČR</p>
           </div>
         </div>
 
