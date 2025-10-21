@@ -31,7 +31,7 @@ export default function Contact() {
         </p>
 
         <div className="grid gap-4 md:grid-cols-2 md:items-start md:gap-8">
-          <div className="grid gap-4 md:text-xl border rounded-xl p-4 my-4 md:my-0 bg-green-50 shadow-md border-green-100 hover:shadow-lg">
+          <div className="grid gap-4 md:text-xl border rounded-xl p-4 my-4 md:my-0 bg-green-700/10 shadow-md border-green-100 hover:shadow-lg">
             <h3 className="text-2xl font-semibold text-left md:text-3xl text-green-700/90">
               Kontaktní informace
             </h3>
@@ -58,7 +58,7 @@ export default function Contact() {
               </Link>
             </div>
 
-            <div className="flex gap-4 border border-green-100 p-4 rounded-xl items-center">
+            <div className="flex gap-4 p-4 rounded-xl items-center">
               <LuMapPin className="text-green-700/90 w-6 h-6" />
               <p>Celá ČR</p>
             </div>

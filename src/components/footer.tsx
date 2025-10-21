@@ -8,9 +8,12 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="grid md:flex p-4 md:px-0 gap-4 justify-center md:justify-between items-center text-black bg-white border-t-2 border-yellow-700/50 md:container md:mx-auto">
+    <footer className="grid md:flex p-4 md:px-0 gap-4 justify-center md:justify-between items-center text-black bg-white border-t border-yellow-700/50 md:container md:mx-auto">
       <div className="flex justify-center">
-        <Link href="/" className="w-32">
+        <Link
+          href="/"
+          className="w-32 transition-all duration-300 ease-in-out hover:scale-105"
+        >
           <img src="/logo.png" />
         </Link>
       </div>
@@ -35,19 +38,22 @@ export const Footer = () => {
       <div className="flex gap-8 text-4xl justify-center">
         <Link
           href="mailto:zahradyviva@gmail.com"
-          className="hover:text-green-600"
+          className="hover:text-green-600 transition-all duration-300 ease-in-out hover:scale-105"
         >
           <AiOutlineMail />
         </Link>
 
-        <Link href="tel:+420607037079" className="hover:text-green-600">
+        <Link
+          href="tel:+420607037079"
+          className="hover:text-green-600 transition-all duration-300 ease-in-out hover:scale-105"
+        >
           <AiOutlinePhone />
         </Link>
 
         <Link
           href="https://www.instagram.com"
           target="_blank"
-          className="hover:text-green-600"
+          className="hover:text-green-600 transition-all duration-300 ease-in-out hover:scale-105"
         >
           <AiOutlineInstagram />
         </Link>
@@ -55,7 +61,7 @@ export const Footer = () => {
         <Link
           href="https://www.youtube.com"
           target="_blank"
-          className="hover:text-green-600"
+          className="hover:text-green-600 transition-all duration-300 ease-in-out hover:scale-105"
         >
           <AiOutlineYoutube />
         </Link>

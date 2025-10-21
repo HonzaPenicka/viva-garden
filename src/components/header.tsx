@@ -7,34 +7,59 @@ export const Header = () => {
   const toggleMenu = useCallback(() => setIsMenuOpen((prev) => !prev), []);
 
   return (
-    <header className="flex justify-between items-center p-4 md:px-0 text-3xl font-bold border-b-2 border-yellow-700/50 bg-white relative overflow-visible md:container md:mx-auto">
+    <header className="flex justify-between items-center p-4 md:px-0 text-3xl font-bold border-b border-yellow-700/50 bg-white relative overflow-visible md:container md:mx-auto">
       <Link href="/" className="w-32">
         <img src="/logo.png" />
       </Link>
+
+      <nav className="hidden lg:flex justify-end w-full">
+        <ul className="flex gap-8 font-semibold text-xl text-black uppercase">
+          <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
+            <a href="/">Domů</a>
+          </li>
+
+          <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
+            <a href="/#about">O nás</a>
+          </li>
+
+          <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
+            <a href="/services">Služby</a>
+          </li>
+
+          {/*<li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
+              <a href="/references">Reference</a>
+            </li>*/}
+
+          <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
+            <a href="/contact">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+
       <button onClick={toggleMenu} aria-label="Toggle menu">
-        <GiHamburgerMenu className="text-black" />
+        <GiHamburgerMenu className="text-black lg:hidden" />
       </button>
 
       {isMenuOpen && (
-        <nav className="absolute top-full z-10 left-0 right-0 bg-white border-2 border-yellow-700/50 p-4 lg:p-8 font-semibold text-xl w-full text-black">
+        <nav className="lg:hidden absolute top-full z-10 left-0 right-0 bg-white border-2 border-yellow-700/50 p-4 lg:p-8 font-semibold text-xl w-full text-black">
           <ul className="flex flex-col gap-4 lg:gap-8 text-right uppercase">
-            <li className="hover:decoration-green-600 hover:text-green-700/90">
+            <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
               <a href="/">Domů</a>
             </li>
 
-            <li className="hover:text-green-700/90">
-              <a href="/about">O nás</a>
+            <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
+              <a href="/#about">O nás</a>
             </li>
 
-            <li className="hover:text-green-700/90">
+            <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
               <a href="/services">Služby</a>
             </li>
 
-            <li className="hover:text-green-700/90">
+            {/*<li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
               <a href="/references">Reference</a>
-            </li>
+            </li>*/}
 
-            <li className="hover:text-green-700/90">
+            <li className="hover:decoration-green-600 hover:text-green-700/90 transition duration-300">
               <a href="/contact">Kontakt</a>
             </li>
           </ul>

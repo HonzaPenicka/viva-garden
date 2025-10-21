@@ -83,7 +83,7 @@ export default function Services() {
               key={title}
               className="p-4 rounded-2xl bg-white shadow-md border border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-4 transition-all duration-300 ease-in-out hover:scale-105">
                 <Icon className="text-green-700/90 w-6 h-6" />
 
                 <h3 className="text-lg font-semibold text-green-700/90">
@@ -96,7 +96,7 @@ export default function Services() {
                   <button key={item}>
                     <Link
                       href=""
-                      className="border p-2 rounded-xl shadow-md border-green-100 hover:shadow-lg hover:bg-green-600/20 w-full block text-center"
+                      className="border p-2 rounded-xl shadow-md border-green-100 hover:shadow-lg hover:bg-green-700/20 w-full block text-center transition-all duration-300 ease-in-out hover:scale-105"
                     >
                       {item}
                     </Link>
