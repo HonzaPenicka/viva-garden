@@ -30,38 +30,55 @@ export default function Contact() {
           kontaktovat na uvedených kontaktech.
         </p>
 
-        <div className="grid gap-4 md:grid-cols-2 md:items-start md:gap-8">
-          <div className="grid gap-4 md:text-xl border rounded-xl p-4 my-4 md:my-0 bg-green-700/10 shadow-md border-green-100 hover:shadow-lg">
-            <h3 className="text-2xl font-semibold text-left md:text-3xl text-green-700/90">
-              Kontaktní informace
-            </h3>
+        <div className="grid gap-4 md:items-start md:gap-8 p-4 hover:shadow-lg rounded-xl">
+          <h3 className="text-2xl font-semibold md:text-3xl text-green-700/90 text-center">
+            Kontaktní informace
+          </h3>
+          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 md:text-xl p-4 my-4 md:my-0">
+            <Link
+              href="mailto:zahradyviva@gmail.com"
+              className="grid items-center justify-center aspect-square max-h-84 gap-4 border bg-white hover:bg-green-700/10 shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
+            >
+              <LuMail className="text-green-700/80 w-10 h-10" />
 
-            <div className="flex gap-4 border bg-white shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl items-center">
-              <LuMail className="text-green-700/80 w-6 h-6" />
+              <h3 className="text-2xl font-semibold">E-mail</h3>
 
-              <Link
-                href="mailto:zahradyviva@gmail.com"
-                className="hover:font-bold hover:text-green-700/90"
-              >
+              <p>Napište nám s jakýmkoli dotazem</p>
+
+              <p className="hover:font-bold hover:text-yellow-700/50 font-semibold text-green-700/90">
                 zahradyviva@gmail.com
-              </Link>
-            </div>
+              </p>
+            </Link>
 
-            <div className="flex gap-4 border bg-white shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl items-center">
-              <LuPhone className="text-green-700/90 w-6 h-6" />
+            <Link
+              href="tel:+420607037079"
+              className="grid items-center justify-center aspect-square max-h-84 gap-4 border bg-white hover:bg-green-700/10 shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
+            >
+              <LuPhone className="text-green-700/90 w-10 h-10" />
 
-              <Link
-                href="tel:+420607037079"
-                className="hover:font-bold hover:text-green-700/90"
-              >
+              <h3 className="text-2xl font-semibold">Telefon</h3>
+
+              <p>Rádi vám zodpovíme vaše dotazy</p>
+
+              <p className="hover:font-bold hover:text-yellow-700/50 font-semibold text-green-700/90">
                 +420 607 037 079
-              </Link>
-            </div>
+              </p>
+            </Link>
 
-            <div className="flex gap-4 p-4 rounded-xl items-center">
-              <LuMapPin className="text-green-700/90 w-6 h-6" />
-              <p>Celá ČR</p>
-            </div>
+            <Link
+              href="tel:+420607037079"
+              className="grid items-center justify-center aspect-square max-h-84 gap-4 border bg-white hover:bg-green-700/10 shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
+            >
+              <LuMapPin className="text-green-700/90 w-10 h-10" />
+
+              <h3 className="text-2xl font-semibold">Lokalita</h3>
+
+              <p>Působíme především v těchto oblastech</p>
+
+              <p className="hover:font-bold hover:text-yellow-700/50 font-semibold text-green-700/90">
+                Severní a střední Čechy, Celá ČR
+              </p>
+            </Link>
           </div>
           <ContactForm />
         </div>
