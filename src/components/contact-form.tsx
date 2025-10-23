@@ -72,7 +72,7 @@ export const ContactForm = () => {
             type="text"
             id="company"
             className="bg-white border border-green-700/50 text-gray-600 text-sm rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 placeholder-gray-400  dark:focus:ring-green-700/90 dark:focus:border-green-700/90 md:text-lg md:text-justify md:p-4"
-            placeholder="Lesy s.r.o."
+            placeholder="Turnov"
           />
         </div>
 
@@ -122,7 +122,7 @@ export const ContactForm = () => {
           <textarea
             id="company"
             className="bg-white border h-36 border-green-700/50 text-gray-600 text-sm rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 placeholder-gray-400  dark:focus:ring-green-700/90 dark:focus:border-green-700/90 md:text-lg md:text-justify md:p-4"
-            placeholder="Lesy s.r.o."
+            placeholder="Pišete nám zde vaši zprávu..."
           />
         </div>
 
