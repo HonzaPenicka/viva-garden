@@ -33,3 +33,27 @@ body {
 .swiper-pagination-bullet-active {
   background: #ffffff !important;
 }
+/* Způsobí, že scrollbar bude vždy viditelný na všech systémech */
+.scrollbar-visible {
+  scrollbar-width: auto; /* Firefox – vždy viditelný scrollbar */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* IE/Edge – ale my ho chceme vidět */
+}
+
+.scrollbar-visible::-webkit-scrollbar {
+  width: 12px; /* Šířka scrollbaru (Chrome, Safari, Edge) */
+}
+
+.scrollbar-visible::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  background: #22c55e; /* Tvoje zelená barva – nebo #16a34a, #15803d… */
+  border-radius: 10px;
+  border: 3px solid #f1f1f1; /* Hezký "oddělený" vzhled */
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
