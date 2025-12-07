@@ -1,9 +1,28 @@
-import { Button } from "./button";
+import { useState, FormEvent } from "react";
 
 export const ContactForm = () => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+
+    // Web3Forms API klíč
+    formData.append("access_key", "6fe77c2a-f5e6-45e0-ba70-defe55555030");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    setResult(data.success ? "Zpráva byla odeslána!" : "Chyba při odesílání");
+  };
+
   return (
-    <form>
-      <div className="grid gap-8 mb-4 shadow-md border border-green-100 hover:shadow-lg p-4 -mx-4 md:p-16 md:mx-4 xl:mx-64 rounded-xl md:gap-8 text-left">
+    <form onSubmit={onSubmit}>
+      <div className="grid bg-white gap-8 mb-4 shadow-md border border-green-100 hover:shadow-lg p-4 -mx-4 md:p-16 md:mx-4 xl:mx-64 rounded-xl md:gap-8 text-left">
         <h3 className="text-4xl font-semibold md:text-3xl text-green-700/90 text-center">
           Nezávazná konzultace
         </h3>
@@ -11,97 +30,97 @@ export const ContactForm = () => {
         <p className="text-gray-600 md:text-lg text-center">
           Vyplňte formulář a my se vám co nejdříve ozveme zpět
         </p>
+
+        {/* Jméno */}
         <div>
-          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg md:text-justify">
+          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg">
             Jméno *
           </label>
           <input
             type="text"
-            id="first_name"
-            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:text-justify md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 placeholder-gray-400 dark:focus:ring-green-700/90 dark:focus:border-green-700/90"
-            placeholder="Jaromír"
+            name="first_name"
             required
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            placeholder="Jaromír"
           />
         </div>
 
+        {/* Příjmení */}
         <div>
-          <label className="block mb-2 text-sm md:text-lg md:text-justify font-semibold text-gray-600">
+          <label className="block mb-2 text-sm md:text-lg font-semibold text-gray-600">
             Příjmení *
           </label>
           <input
             type="text"
-            id="last_name"
-            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:text-justify md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 placeholder-gray-400 dark:focus:ring-green-700/90 dark:focus:border-green-700/90"
-            placeholder="Novák"
+            name="last_name"
             required
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            placeholder="Novák"
           />
         </div>
 
+        {/* Telefon */}
         <div>
-          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg md:text-justify">
-            Telefonní číslo
+          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg">
+            Telefonní číslo *
           </label>
           <input
             type="tel"
-            id="phone"
-            className="bg-white border border-green-700/50 text-gray-600 text-sm rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2   placeholder-gray-400  dark:focus:ring-green-700/90 dark:focus:border-green-700/90 md:text-lg md:text-justify md:p-4"
-            placeholder="+420 123 456 789"
-            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            name="phone"
             required
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            placeholder="+420 123 456 789"
           />
         </div>
 
+        {/* Email */}
         <div>
-          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg md:text-justify">
-            Emailová adresa
+          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg">
+            Emailová adresa *
           </label>
           <input
             type="email"
-            id="email"
-            className="bg-white border border-green-700/50 text-gray-600 text-sm rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2   placeholder-gray-400  dark:focus:ring-green-700/90 dark:focus:border-green-700/90 md:text-lg md:text-justify md:p-4"
-            placeholder="jaromir.novak@gmail.com"
+            name="email"
             required
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            placeholder="jaromir.novak@gmail.com"
           />
         </div>
 
+        {/* Lokalita */}
         <div>
-          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg md:text-justify">
+          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg">
             Lokalita projektu *
           </label>
           <input
             type="text"
-            id="company"
-            className="bg-white border border-green-700/50 text-gray-600 text-sm rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 placeholder-gray-400  dark:focus:ring-green-700/90 dark:focus:border-green-700/90 md:text-lg md:text-justify md:p-4"
+            name="location"
+            required
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="Turnov"
           />
         </div>
 
+        {/* Typ služby */}
         <div>
-          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg md:text-justify">
+          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg">
             Typ služby *
           </label>
           <div className="relative">
             <select
-              id="service"
-              className="bg-white border border-green-700/50 text-gray-600 text-sm rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 pr-8 appearance-none placeholder-gray-400 dark:focus:ring-green-700/90 dark:focus:border-green-700/90 md:text-lg md:text-justify md:p-4"
+              name="service"
               required
+              className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 pr-8 appearance-none"
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Vyberte typ služby
               </option>
-              <option value="udrzba">Údržba zahradní zeleně</option>
               <option value="zakladani">Zakládání zahrad</option>
+              <option value="udrzba">Údržba zahradní zeleně</option>
               <option value="jezirka">Tvorba přírodních jezírek</option>
               <option value="tereni">Terénní úpravy</option>
               <option value="oploceni">Oplocení</option>
-              <option value="automatizovane">Automatizované sekání</option>
-              <option value="uklid">Úklid a vyklízení</option>
-              <option value="realitni">
-                Spolupráce s realitními kancelářemi
-              </option>
-              <option value="prevoz">Převoz materiálu</option>
-              <option value="kovovyroba">Zakázková kovovýroba</option>
-              <option value="stavebni">Stavební práce</option>
+              <option value="terasy">Terasy a dlažby</option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
@@ -115,20 +134,30 @@ export const ContactForm = () => {
           </div>
         </div>
 
+        {/* Zpráva */}
         <div className="mb-4">
-          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg md:text-justify">
+          <label className="block mb-2 text-sm font-semibold text-gray-600 md:text-lg">
             Zpráva *
           </label>
           <textarea
-            id="company"
-            className="bg-white border h-36 border-green-700/50 text-gray-600 text-sm rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 placeholder-gray-400  dark:focus:ring-green-700/90 dark:focus:border-green-700/90 md:text-lg md:text-justify md:p-4"
+            name="message"
+            required
+            className="bg-white border h-36 border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="Pišete nám zde vaši zprávu..."
-          />
+          ></textarea>
         </div>
 
+        {/* Výsledek */}
+        {result && (
+          <p className="text-center font-semibold text-green-700/90">
+            {result}
+          </p>
+        )}
+
+        {/* Submit */}
         <button
           type="submit"
-          className="text-white bg-green-700/90 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-green-700/90 font-semibold rounded-xl text-lg w-full sm:w-auto px-6 py-4 md:py-4 md:text-xl text-center dark:bg-green-700/90 dark:hover:bg-green-700/90 dark:focus:ring-green-700/90"
+          className="text-white bg-green-700/90 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-700/90 font-semibold rounded-xl text-lg w-full sm:w-auto px-6 py-4 md:text-xl"
         >
           Odeslat
         </button>

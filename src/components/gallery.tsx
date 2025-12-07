@@ -11,9 +11,8 @@ type PhotoItem = {
 };
 
 type Props = {
-  before: PhotoItem[]; // fotografie PŘED
-  after: PhotoItem[]; // fotografie PO
-  // volitelné: cover obrázek pro tlačítko (pokud chceš náhled na button)
+  before: PhotoItem[];
+  after: PhotoItem[];
   beforeCover?: string;
   afterCover?: string;
   buttonClassName?: string;
@@ -35,12 +34,14 @@ export default function Gallery({ before, after, buttonClassName }: Props) {
 
   return (
     <div className="grid md:grid-cols-2 gap-4 text-black p-4 md:p-0 md:py-4 pt-0 text-center">
-      {/* BEFORE button */}
+      {/* BEFORE */}
       <div className="grid">
         <button
           className={btnBase}
+          disabled={before.length === 0}
           onClick={() => {
-            setStartBefore(1); // začít od první fotky
+            if (before.length === 0) return;
+            setStartBefore(1);
             setOpenBefore((s) => !s);
           }}
         >
@@ -52,18 +53,22 @@ export default function Gallery({ before, after, buttonClassName }: Props) {
           </div>
         </button>
 
-        <FsLightbox
-          toggler={openBefore}
-          sources={beforeSources}
-          slide={startBefore}
-        />
+        {before.length > 0 && (
+          <FsLightbox
+            toggler={openBefore}
+            sources={beforeSources}
+            slide={startBefore}
+          />
+        )}
       </div>
 
-      {/* AFTER button */}
+      {/* AFTER */}
       <div className="grid">
         <button
           className={btnBase}
+          disabled={after.length === 0}
           onClick={() => {
+            if (after.length === 0) return;
             setStartAfter(1);
             setOpenAfter((s) => !s);
           }}
@@ -74,11 +79,13 @@ export default function Gallery({ before, after, buttonClassName }: Props) {
           </div>
         </button>
 
-        <FsLightbox
-          toggler={openAfter}
-          sources={afterSources}
-          slide={startAfter}
-        />
+        {after.length > 0 && (
+          <FsLightbox
+            toggler={openAfter}
+            sources={afterSources}
+            slide={startAfter}
+          />
+        )}
       </div>
     </div>
   );

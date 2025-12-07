@@ -16,8 +16,8 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="grid gap-8 text-black p-4 pt-0 md:container md:mx-auto md:gap-24 text-center">
-        <div className="bg-[url('/img/garden.jpg')] grid gap-8 bg-cover bg-center -mx-4 md:mx-0 min-h-[600px] md:min-h-[700px]">
+      <main className="grid gap-8 text-black p-4 pt-0 md:container md:mx-auto lg:gap-24 text-center">
+        <div className="bg-[url('/img/image-6.png')] lg:bg-[url('/img/image-7.png')] grid gap-8 bg-cover bg-center bg-no-repeat -mx-4 md:mx-0 min-h-[600px] md:min-h-[700px]">
           <div className="flex flex-col justify-center">
             <h1 className="text-6xl md:text-7xl font-bold px-4 text-white uppercase py-16">
               ZAHRADY <br />
@@ -36,8 +36,8 @@ export default function Home() {
           className="grid gap-8 lg:gap-24 lg:grid-cols-2 md:items-center text-justify"
           id="about"
         >
-          <div className="grid gap-4 self-start">
-            <h2 className="text-3xl md:text-4xl font-semibold my-4 md:my-0 md:pb-4 text-center md:text-left">
+          <div className="grid gap-4">
+            <h2 className="text-3xl md:text-4xl font-semibold my-4 md:my-0 md:pb-4 text-center">
               O nás
             </h2>
             <p className="text-sm md:text-lg">
@@ -73,9 +73,9 @@ export default function Home() {
 
           <div>
             <img
-              src="/img/garden-green.jpg"
+              src="/img/lidi-3.png"
               alt="garden-green"
-              className="rounded-xl bg-cover h-84 md:h-full w-full"
+              className="rounded-xl bg-cover"
             />
           </div>
 
@@ -221,11 +221,12 @@ export default function Home() {
           </div>
         </div>
 
-        <h3 className="text-xl font-semibold md:text-3xl text-green-700/90 text-justify lg:text-center -mt-4 md:-my-8">
-          Tradice, zkušenost a péče, která má kořeny.
+        <h3 className="text-xl font-semibold md:text-3xl text-green-700/90 text-center -mt-4 md:mt-0 lg:-my-4">
+          Tradice, zkušenost a péče, <br />
+          která má kořeny.
         </h3>
 
-        <div className="grid gap-4 md:gap-8 bg-green-700/20 rounded-xl p-4 py-8 md:p-8 md:mb-8">
+        <div className="grid gap-4 md:gap-8 bg-white rounded-xl p-4 py-8 md:p-8 md:mb-8">
           <h3 className="text-3xl md:text-4xl font-semibold text-center">
             Připravte svou zahradu na novou sezónu
           </h3>

@@ -34,10 +34,10 @@ export default function Contact() {
           <h3 className="text-3xl font-semibold md:text-3xl text-green-700/90 text-center">
             Kontaktní informace
           </h3>
-          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 md:text-xl p-4 my-4 md:my-0">
+          <div className="flex flex-col lg:flex-row justify-center gap-4 md:gap-8 md:text-xl py-4 md:px-4 my-4 md:my-0">
             <Link
               href="mailto:zahradyviva@gmail.com"
-              className="grid items-center text-center justify-center w-full aspect-square max-h-84 gap-4 border bg-white hover:bg-green-700/10 shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
+              className="grid items-center text-center justify-center w-full aspect-square max-h-84 gap-4 border bg-white shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
             >
               <div className="flex justify-center items-center">
                 <LuMail className="text-green-700/80 w-10 h-10" />
@@ -57,7 +57,7 @@ export default function Contact() {
 
             <Link
               href="tel:+420607037079"
-              className="grid items-center text-center justify-center w-full aspect-square max-h-84 gap-4 border bg-white hover:bg-green-700/10 shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
+              className="grid items-center text-center justify-center w-full aspect-square max-h-84 gap-4 border bg-white shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
             >
               <div className="flex justify-center items-center">
                 <LuPhone className="text-green-700/90 w-10 h-10" />
@@ -77,7 +77,7 @@ export default function Contact() {
 
             <Link
               href="tel:+420607037079"
-              className="grid items-center text-center justify-center w-full aspect-square max-h-84 gap-4 border bg-white hover:bg-green-700/10 shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
+              className="grid items-center text-center justify-center w-full aspect-square max-h-84 gap-4 border bg-white shadow-md border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-4 rounded-xl"
             >
               <div className="flex justify-center items-center">
                 <LuMapPin className="text-green-700/90 w-10 h-10" />
@@ -107,7 +107,7 @@ export default function Contact() {
           </p>
 
           <div className="grid gap-4 md:gap-8 md:text-xl text-justify">
-            <div className="grid gap-4 p-4 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 mx-">
+            <div className="grid bg-white gap-4 p-4 md:p-8 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <h3 className="text-xl text-left font-semibold">
                 Jak dlouho trvá realizace zahrady?
               </h3>
@@ -120,7 +120,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="grid gap-4 p-4 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 mx-">
+            <div className="grid bg-white gap-4 p-4 md:p-8 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <h3 className="text-xl text-left font-semibold">
                 Jaké jsou ceny vašich služeb?
               </h3>
@@ -132,7 +132,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="grid gap-4 p-4 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 mx-">
+            <div className="grid bg-white gap-4 p-4 md:p-8 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <h3 className="text-xl text-left font-semibold">
                 Poskytujete záruku na realizované práce?
               </h3>
@@ -144,7 +144,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="mb-4 grid gap-4 p-4 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 mx-">
+            <div className="mb-4 bg-white grid gap-4 p-4 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 mx-">
               <h3 className="text-xl text-left font-semibold">
                 Pracujete i v zimních měsících?
               </h3>
