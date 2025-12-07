@@ -408,7 +408,7 @@ export default function Services() {
       <Header />
 
       <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:px-0 md:gap-8 text-center">
-        <div className="bg-[url('/img/services.webp')] text-white grid gap-4 bg-cover bg-top-left -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
+        <div className="bg-[url('/img/jpeg-optimizer_services.jpg')] text-white grid gap-4 bg-cover bg-top-left -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
           <div className="flex flex-col gap-8 justify-center">
             <h1 className="text-6xl md:text-7xl font-bold px-4 uppercase pt-8">
               Nabízené <br /> služby
@@ -416,7 +416,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="text-left text-sm pb-4 md:text-lg mt-4">
+        <div className="text-justify md:text-center text-sm pb-4 md:text-lg mt-4">
           Zajišťujeme široké spektrum služeb zaměřených na realizaci, údržbu i
           technické zajištění zahrad a přilehlých prostor.
           <br />
@@ -432,14 +432,14 @@ export default function Services() {
               key={title}
               className="p-4 grid rounded-2xl bg-white shadow-md border border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="flex flex-col items-left text-left gap-4 pb-4 lg:mr-16">
+              <div className="flex flex-col items-left text-left gap-4 pb-4 mr-8 lg:mr-16">
                 <Icon className="text-green-700/90 w-8 h-8" />
 
                 <h3 className="text-2xl font-semibold text-green-700/90">
                   {title}
                 </h3>
 
-                <p className="text-sm md:h-20">{text}</p>
+                <p className="text-justify text-sm md:h-20">{text}</p>
               </div>
               <div className="text-sm grid text-left overflow-y-scroll pr-2 max-h-80 scrollbar-visible">
                 {items.map((item) => (
@@ -448,7 +448,9 @@ export default function Services() {
                     className="grid gap-4 border p-4 py-6 mb-4 border-green-200 rounded-xl"
                   >
                     <div className="font-semibold text-lg">{item.name}</div>
-                    <div className="text-xs md:text-sm">{item.text}</div>
+                    <div className="text-justify text-xs md:text-sm">
+                      {item.text}
+                    </div>
                     <Gallery
                       before={item.before}
                       after={item.after}

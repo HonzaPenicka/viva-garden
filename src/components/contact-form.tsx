@@ -5,9 +5,9 @@ export const ContactForm = () => {
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-    // Web3Forms API klíč
     formData.append("access_key", "6fe77c2a-f5e6-45e0-ba70-defe55555030");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -17,7 +17,12 @@ export const ContactForm = () => {
 
     const data = await response.json();
 
-    setResult(data.success ? "Zpráva byla odeslána!" : "Chyba při odesílání");
+    if (data.success) {
+      setResult("Zpráva byla odeslána!");
+      form.reset(); // 🔥 reset formuláře po úspěchu
+    } else {
+      setResult("Chyba při odesílání");
+    }
   };
 
   return (
@@ -122,6 +127,7 @@ export const ContactForm = () => {
               <option value="oploceni">Oplocení</option>
               <option value="terasy">Terasy a dlažby</option>
             </select>
+
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
                 className="fill-current h-4 w-4"
