@@ -11,7 +11,7 @@ export default function Contact() {
       <Header />
 
       <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:px-0 md:gap-8 text-justify lg:text-center">
-        <div className="bg-[url('/img/jpeg-optimizer_garden.jpg')] grid gap-4 bg-cover bg-center -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
+        <div className="bg-[url('/img/flower1-min.jpg')] grid gap-4 bg-cover bg-left md:bg-center -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
           <div className="flex flex-col gap-8 justify-center">
             <h1 className="text-6xl md:text-7xl font-bold px-4 text-white uppercase pt-8 text-center">
               Kontakt

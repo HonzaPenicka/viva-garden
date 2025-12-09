@@ -17,6 +17,7 @@ const servicesData = [
   {
     icon: LuLeaf,
     title: "Zakládání zahrad",
+    bgImage: "/img/zahrady/vysadba/jpeg-optimizer_IMG_1243.jpeg",
     text: [
       "Kompletní realizace zahradních prvků včetně zakládání záhonů, trávníků, chodníků a výstavby zahradních zídek.",
     ],
@@ -67,6 +68,7 @@ const servicesData = [
   {
     icon: LuDroplets,
     title: "Údržba zahradní zeleně",
+    bgImage: "/img/zelen/snizeni jicin/jpeg-optimizer_00 PO.jpeg",
     items: [
       {
         name: "Obnova zarostlé zahrady Hradec Králové",
@@ -150,12 +152,16 @@ const servicesData = [
   {
     icon: LuDroplets,
     title: "Tvorba přírodních jezírek",
+    bgImage: "/img/jezirka/jezero.jpg",
     items: [
       {
         name: "Přírodní jezírko",
         text: "Vytvoření přírodního jezírka s ekologickým přístupem, zajišťujícím dlouhodobou funkčnost a harmonické začlenění do zahradního prostředí.",
         before: [],
-        after: [{ src: "/img/jezirka/jpeg-optimizer_TOPIC.jpeg" }],
+        after: [
+          { src: "/img/jezirka/jezero.jpg" },
+          { src: "/img/jezirka/jezero2.jpg" },
+        ],
       },
     ],
     text: [
@@ -165,6 +171,7 @@ const servicesData = [
   {
     icon: LuHammer,
     title: "Terénní úpravy",
+    bgImage: "/img/teren/pripojka lbc/jpeg-optimizer_IMG_1145.jpeg",
     items: [
       {
         name: "Úprava terénu zahrady a založení trávníku Jičín",
@@ -214,6 +221,7 @@ const servicesData = [
   {
     icon: LuFence,
     title: "Oplocení",
+    bgImage: "/img/oploceni/jicin/jpeg-optimizer_GPTempDownload (6).jpeg",
     items: [
       {
         name: "Renovace oplocení WPC Jičín",
@@ -296,6 +304,7 @@ const servicesData = [
   {
     icon: LuWrench,
     title: "Terasy a dlažby",
+    bgImage: "/img/teresy/hasici lbc/jpeg-optimizer_IMG_0917.jpeg",
     items: [
       {
         name: "Dlažba Hasičská vodní nádrž Liberec",
@@ -427,20 +436,29 @@ export default function Services() {
         </div>
 
         <section className="grid gap-4 md:gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {servicesData.map(({ icon: Icon, title, items, text }) => (
+          {servicesData.map(({ icon: Icon, title, items, text, bgImage }) => (
             <div
               key={title}
-              className="p-4 grid rounded-2xl bg-white shadow-md border border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="p-4 flex flex-col rounded-2xl bg-white shadow-md border border-green-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full"
             >
-              <div className="flex flex-col items-left text-left gap-4 pb-4 mr-8 lg:mr-16">
+              <div className="flex flex-col items-left text-left gap-4 pb-4">
                 <Icon className="text-green-700/90 w-8 h-8" />
-
-                <h3 className="text-2xl font-semibold text-green-700/90">
+                <h3 className="text-xl font-semibold text-green-700/90">
                   {title}
                 </h3>
 
-                <p className="text-justify text-sm md:h-20">{text}</p>
+                <div
+                  className="bg-cover bg-center rounded-lg h-56 px-4 py-8 md:align-text-bottom flex items-end"
+                  style={{
+                    backgroundImage: bgImage ? `url('${bgImage}')` : "none",
+                  }}
+                >
+                  <div className="flex flex-col gap-4 bg-white/80 py-2 px-4 rounded-lg md:mr-16 self-end">
+                    <p className="text-justify text-xs/4 font-medium">{text}</p>
+                  </div>
+                </div>
               </div>
+
               <div className="text-sm grid text-left overflow-y-scroll pr-2 max-h-80 scrollbar-visible">
                 {items.map((item) => (
                   <div

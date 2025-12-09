@@ -33,7 +33,7 @@ export default function Gallery({ before, after, buttonClassName }: Props) {
     "grid items-center py-1 px-2 rounded-xl shadow-lg bg-gradient-to-br from-green-700/90 to-yellow-700/50";
 
   return (
-    <div className="grid md:grid-cols-2 gap-4 text-black p-4 md:p-0 md:py-4 pt-0 text-center">
+    <div className="grid md:grid-cols-2 gap-4 text-black py-4 md:p-0 md:py-4 text-center">
       {/* BEFORE */}
       <div className="grid">
         <button
