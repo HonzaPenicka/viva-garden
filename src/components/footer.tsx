@@ -8,7 +8,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="grid md:flex p-4 md:px-0 gap-4 justify-center md:justify-between items-center text-black border-t border-yellow-700/50 md:container md:mx-auto">
+    <footer className="grid md:flex p-4 gap-4 justify-center md:justify-between items-center text-black border-t border-yellow-700/50 md:container md:mx-auto">
       <div className="flex justify-center">
         <Link
           href="/"

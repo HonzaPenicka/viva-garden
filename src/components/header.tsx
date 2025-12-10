@@ -7,7 +7,7 @@ export const Header = () => {
   const toggleMenu = useCallback(() => setIsMenuOpen((prev) => !prev), []);
 
   return (
-    <header className="flex justify-between items-center p-4 md:px-0 text-3xl font-bold relative overflow-visible md:container md:mx-auto">
+    <header className="flex justify-between items-center p-4 text-3xl font-bold relative overflow-visible md:container md:mx-auto">
       <Link href="/" className="w-32">
         <img src="/logo.png" />
       </Link>
