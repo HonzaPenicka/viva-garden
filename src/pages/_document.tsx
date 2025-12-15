@@ -1,9 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <link rel="icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -78,6 +80,7 @@ export default function Document() {
       <body className="antialiased">
         <Main />
         <NextScript />
+        <Analytics />
       </body>
     </Html>
   );
