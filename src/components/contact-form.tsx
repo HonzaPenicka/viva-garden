@@ -45,7 +45,7 @@ export const ContactForm = () => {
             type="text"
             name="first_name"
             required
-            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-xl focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="Jaromír"
           />
         </div>
@@ -59,7 +59,7 @@ export const ContactForm = () => {
             type="text"
             name="last_name"
             required
-            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-xl focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="Novák"
           />
         </div>
@@ -73,7 +73,7 @@ export const ContactForm = () => {
             type="tel"
             name="phone"
             required
-            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-xl focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="+420 123 456 789"
           />
         </div>
@@ -87,7 +87,7 @@ export const ContactForm = () => {
             type="email"
             name="email"
             required
-            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-xl focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="jaromir.novak@gmail.com"
           />
         </div>
@@ -101,7 +101,7 @@ export const ContactForm = () => {
             type="text"
             name="location"
             required
-            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-xl focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="Turnov"
           />
         </div>
@@ -115,7 +115,7 @@ export const ContactForm = () => {
             <select
               name="service"
               required
-              className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 pr-8 appearance-none"
+              className="bg-white border border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-xl focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2 pr-8 appearance-none"
             >
               <option value="" disabled>
                 Vyberte typ služby
@@ -148,7 +148,7 @@ export const ContactForm = () => {
           <textarea
             name="message"
             required
-            className="bg-white border h-36 border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-lg focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
+            className="bg-white border h-36 border-green-700/50 text-gray-600 text-sm md:text-lg md:p-4 rounded-xl focus:ring-green-700/90 focus:border-green-700/90 block w-full p-2"
             placeholder="Pišete nám zde vaši zprávu..."
           ></textarea>
         </div>

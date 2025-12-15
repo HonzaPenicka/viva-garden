@@ -18,8 +18,8 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="grid gap-8 text-black p-4 pt-0 md:container md:mx-auto lg:gap-24 text-center">
-        <div className="bg-[url('/img/image-6.jpg')] lg:bg-[url('/img/image-7.jpg')] grid gap-8 bg-cover bg-center bg-no-repeat -mx-4 md:mx-0 min-h-[600px] md:min-h-[700px]">
+      <main className="grid gap-8 text-black p-4 pt-0 md:px-0 md:container md:mx-auto lg:gap-24 text-center">
+        <div className="bg-[url('/img/image-6.jpg')] lg:bg-[url('/img/image-7.jpg')] grid gap-8 bg-cover bg-center bg-no-repeat -mx-4 md:mx-0 min-h-[600px] md:min-h-[700px] md:rounded-xl">
           <div className="flex flex-col justify-center">
             <h1 className="text-6xl md:text-7xl font-bold px-4 text-white uppercase py-16">
               ZAHRADY <br />

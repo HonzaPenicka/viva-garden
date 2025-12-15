@@ -417,7 +417,7 @@ export default function Services() {
       <Header />
 
       <main className="grid gap-4 text-black p-4 pt-0 md:container md:mx-auto md:px-0 md:gap-8 text-center">
-        <div className="bg-[url('/img/jpeg-optimizer_services.jpg')] text-white grid gap-4 bg-cover bg-top-left -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px]">
+        <div className="bg-[url('/img/jpeg-optimizer_services.jpg')] text-white grid gap-4 bg-cover bg-top-left -mx-4 md:mx-0 min-h-[400px] md:min-h-[700px] md:rounded-xl">
           <div className="flex flex-col gap-8 justify-center">
             <h1 className="text-6xl md:text-7xl font-bold px-4 uppercase pt-8">
               Nabízené <br /> služby
@@ -448,12 +448,12 @@ export default function Services() {
                 </h3>
 
                 <div
-                  className="bg-cover bg-center rounded-lg h-56 px-4 py-8 md:align-text-bottom flex items-end"
+                  className="bg-cover bg-center rounded-xl h-56 px-4 py-8 md:align-text-bottom flex items-end"
                   style={{
                     backgroundImage: bgImage ? `url('${bgImage}')` : "none",
                   }}
                 >
-                  <div className="flex flex-col gap-4 bg-white/80 py-2 px-4 rounded-lg md:mr-16 self-end">
+                  <div className="flex flex-col gap-4 bg-white/80 py-2 px-4 rounded-xl md:mr-16 self-end">
                     <p className="text-justify text-xs/4 font-medium">{text}</p>
                   </div>
                 </div>
